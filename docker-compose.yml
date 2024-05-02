@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  signalrchat:
+    deploy:
+      replicas: 1
+    image: edvansanchoo/signalrchat:latest
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
